@@ -1,0 +1,30 @@
+{
+    "env": "developement",
+    "port": 3000,
+    "zipCode": {
+        "apiKey": "YOUT_ZIPCOD_API_KEY",
+        "apiURL": "https://zipcodeapi.com/rest/"
+    },
+    "logger": {
+      "threshold": "debug",
+      "console": {
+        "level": "debug"
+      }
+    },
+    "producer": {
+      "exchange": "distance"
+    },
+    "rabbitMQ": {
+      "host": "127.0.0.1",
+      "port": "5672",
+      "user": "guest",
+      "password": "guest"
+    },
+    "mongoDB": {
+      "host": "127.0.0.1",
+      "port": "27017",
+      "database": "YOUR_MONGODB_DATABASE",
+      "user": "YOUR_MONGODB_USER",
+      "password": "YOUR_MONGODB_PWD"
+    }
+  }

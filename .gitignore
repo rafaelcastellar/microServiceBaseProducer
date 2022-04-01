@@ -1,0 +1,18 @@
+
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store
+
+# Logs
+*.log
+
+# Users Environment Variables
+.lock-wscript
+
+# Runtime configuration for swagger app
+config/runtime.yaml
+
+config/default.json
+config/secretKeys.js
