@@ -20,7 +20,7 @@ const sendQueryDistanceLog = async (someAdditionalText) => {
     // someAdditionalText is a text you want to add to the message 
     log.addtional = someAdditionalText;
 
-    logger.debug("Sending message for ", exchange, key);
+    logger.debug(`Sending message for exchange: ${exchange} and key: ${key}`);
     return rabbitMq.sendMessage(exchange, `${key}`, log);
 }
 

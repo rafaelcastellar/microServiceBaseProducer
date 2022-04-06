@@ -4,7 +4,7 @@
   "description": "A base structure for microservice which access an external API, uses MongoDB and produces messagens to an rabbiMQ topic.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

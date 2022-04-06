@@ -1,5 +1,5 @@
 # microServiceBaseProducer
-This is a simple but extended example of a NodeJS microservice that can be used as a base for creating new one, more reliable and complete. 
+This is a dummy but extended example of a NodeJS microservice that can be used as a base for creating new one, more reliable and complete. 
 It was created as resulting from my study about microservices which I did from my short experience creating NodeJS APIs and reading some good tutorials listed bellow.
 
 I hope it can help you learn about microservice and enhance this base.

@@ -15,14 +15,16 @@ logger.info('Starting RabbitMQ connection');
 
 
 module.exports = {
-  sendMessage(exchange, key, message) {
-    return client
-      .then(connection => connection.createChannel())
-      .then(channel => channel.assertExchange(exchange, 'topic', { durable: true })
-        .then(() => channel.publish(exchange, key, Buffer.from(JSON.stringify(message)), { persistent: true }))
-        .then(() => logger.debug('Sent message :', message))
-        .then(() => channel.close())
-      )
-      .catch(logger.error);
-  },
+    sendMessage(exchange, key, message) {
+        return client
+            .then(connection => connection.createChannel())
+            .then(channel => channel.assertExchange(exchange, 'topic', { durable: true })
+                // .then(() => channel.assertQueue('', { durable: true })
+                    // .then((q) => channel.bindQueue(q.queue, exchange, key)
+                        .then(() => channel.publish(exchange, key, Buffer.from(JSON.stringify(message)), { persistent: true }))
+                        .then(() => logger.debug('Sent message: ' + JSON.stringify(message)))
+                        .then(() => channel.close())
+            )
+            .catch((error) => logger.error('Error sending message to MQ: ' + error));
+    },
 };
